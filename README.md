@@ -1,5 +1,4 @@
 # Graph Policy Network for Transferable Active Learning on Graphs
-
 This is the code of the paper **G**raph **P**olicy network for transferable **A**ctive learning on graphs (GPA). 
 
 ## Dependencies
@@ -10,7 +9,11 @@ numpy==1.16.3
 scipy==1.2.1
 torch==1.3.1
 
+## Data
+We have provided Cora, Pubmed, Citeseer, Reddit1401 whose data format have been processed and can be directly consumed by our code. Reddit1401 is collected from the reddit data source (where 1401 means Janurary, 2014) and preprocessed by ourselves. If you use these graphs in your work, please cite our paper. For the Coauthor_CS and Coauthor_Phy dataset, we don't provide the processed data because they are too large for github repos. If you are interested, please email shengdinghu@gmail.com  for the processed data.
+
 ## Train
+
 Use ```train.py``` to train the active learning policy on multiple labeled training graphs. Assume that we have two labeled training graphs ```A``` and ```B``` with query budgets of ```x``` and ```y``` respectively, and we want to save the trained model in ```temp.pkl```, then use the following commend: 
 ```
 python -m src.train --datasets A+B --budgets x+y  --save 1 --savename temp
