@@ -1,0 +1,2 @@
+MIN_EPSILON = 1e-10
+MAX_EXP = 70
